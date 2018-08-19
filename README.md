@@ -1,2 +1,2 @@
 # freemarker-extras-shiro
-A freemarker dialect for Apache Shiro tags.
+A <a href="https://freemarker.apache.org/">freemarker</a> dialect for <a href="https://shiro.apache.org/">Apache Shiro</a> <a href="https://shiro.apache.org/tags">tags</a>.
