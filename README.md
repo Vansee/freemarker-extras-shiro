@@ -122,3 +122,120 @@
     </core>
     </pre>
 </div>
+<h3>
+    <a id="user-content-tags" class="anchor" aria-hidden="true" href="#tags"></a>
+    Tags
+</h3>
+<p>The following examples show how to integrate the tags in your Freemarker templates.
+These are all implementations of the examples given in the <a href="http://shiro.apache.org/web.html#Web-JSP%252FGSPTagLibrary" rel="nofollow">JSP / GSP Tag Library Section</a> of the Apache Shiro documentation.
+</p>
+<p>Tags can be written in element notation:</p>
+<h5>
+    <a id="user-content-element" class="anchor" aria-hidden="true" href="#element"></a>
+    Element
+</h5>
+<div class="highlight highlight-text-html-basic">
+<pre>
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.anyTag</span></span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Hello World!&lt;/<span class="pl-ent">p</span>&gt;
+&lt;/<span class="pl-ent"><span class="pl-ii">@shiro.anyTag</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.guest</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.guest</span></span>&gt;
+        &lt;<span class="pl-ent">p</span>&gt;Hi there! Please <a href="login.html">Login</a> or <a href="signup.html">Signup</a> today!&lt;/<span class="pl-ent">/p</span>&gt;
+    &lt;/<span class="pl-ent"><span class="pl-ii">@shiro.guest</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.user</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.user</span></span>&gt;
+        &lt;<span class="pl-ent">div</span>&gt;Welcome back John! Not John? Click <a href="login.html">here</a> to login.&lt;<span class="pl-ent">/div</span>&gt;
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.user</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.authenticated</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.notAuthenticated</span></span>&gt;
+        Please <a href="login.html">login</a> in order to update your credit card information.
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.notAuthenticated</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.principal</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent">p</span>&gt;Hello,
+        &lt;<span class="pl-ent"><span class="pl-ii">@shiro.principal/</span></span>&gt;
+        , how are you today?
+     &lt;<span class="pl-ent">/p</span>&gt;
+     &lt;<span class="pl-ent">p>Hello,
+        &lt;<span class="pl-ent"><span class="pl-ii">@shiro.principal type="your class type full class path" property="attribute name of class"/</span></span>&gt;
+        , how are you today?
+     &lt;<span class="pl-ent">/p</span>&gt;
+</pre>
+</div>
+<h4>shiro.lacksRole</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.lacksRole name="administrator"</span></span>&gt;
+        Sorry, you are not allowed to administer the system.
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.lacksRole</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.hasAllRoles</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAllRoles name="developer, project manager"</span></span>&gt;
+        &lt;<span class="pl-ent">p</span>&gt;You are a developer and a project manager.&lt;<span class="pl-ent">/p</span>&gt;
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAllRoles</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.hasAnyRoles</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAnyRoles name="developer, project manager, administrator"</span></span>&gt;
+        &lt;<span class="pl-ent">p</span>&gt;You are a developer, project manager, or administrator.&lt;<span class="pl-ent">/p</span>&gt;
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAnyRoles></span></span>&gt;
+</pre>
+</div>
+<h4>shiro.hasPermission</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasPermission name="user:create"</span></span>&gt;
+        &lt;<span class="pl-ent">a href="createUser.html"</span>&gt;Create a new User&lt;<span class="pl-ent">/a</span>&gt;
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasPermission</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.lacksPermission</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.lacksPermission name="user:delete"</span></span>&gt;
+        Sorry, you are not allowed to delete user accounts.
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.lacksPermission</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.hasAllPermissions</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAllPermissions name="user:create, user:delete"</span></span>&gt;
+        &lt;<span class="pl-ent">p</span>&gt;You can create and delete users.&lt;<span class="pl-ent">/p</span>&gt;
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAllPermissions</span></span>&gt;
+</pre>
+</div>
+<h4>shiro.hasAnyPermissions</h4>
+<div class="highlight highlight-text-html-basic">
+<pre>
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAnyPermissions name="user:create, user:delete"</span></span>&gt;
+        &lt;<span class="pl-ent">p</span>&gt;You can create or delete users.&lt;<span class="pl-ent">/p</span>&gt;
+    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAnyPermissions</span></span>&gt;
+</pre>
+</div>
+<h2>
+    <a id="user-content-license" class="anchor" aria-hidden="true" href="#license"></a>
+    License
+</h2>
+<p>The project is licensed under the Apache License. See <a href="/vansee/freemarker-extras-shiro/blob/master/LICENSE">LICENSE</a> for details.</p>
