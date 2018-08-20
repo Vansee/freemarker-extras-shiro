@@ -66,57 +66,6 @@
         &lt;@shiro.user&gt;
             &lt;div&gt;Welcome back John! Not John? Click &lt;a href="login.html"&gt;here&lt;/a&gt; to login.&lt;/div&gt;
         &lt;&#47;@shiro.user&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.authenticated&lt;/h3&gt;
-        &lt;@shiro.notAuthenticated&gt;
-            Please &lt;a href="login.html"&gt;login&lt;/a&gt; in order to update your credit card information.
-        &lt;&#47;@shiro.notAuthenticated&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.principal&lt;/h3&gt;
-        &lt;p&gt;Hello,
-            &lt;@shiro.principal/&gt;
-            , how are you today?
-        &lt;/p&gt;
-        &lt;p&gt;Hello,
-            &lt;@shiro.principal type="your class type full class path" property="attribute name of class"/&gt;
-            , how are you today?
-        &lt;/p&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.lacksRole&lt;/h3&gt;
-        &lt;@shiro.lacksRole name="administrator"&gt;
-            Sorry, you are not allowed to administer the system.
-        &lt;&#47;@shiro.lacksRole&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.hasAllRoles&lt;/h3&gt;
-        &lt;@shiro.hasAllRoles name="developer, project manager"&gt;
-            &lt;p&gt;You are a developer and a project manager.&lt;/p&gt;
-        &lt;&#47;@shiro.hasAllRoles&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.hasAnyRoles&lt;/h3&gt;
-        &lt;@shiro.hasAnyRoles name="developer, project manager, administrator"&gt;
-            &lt;p&gt;You are a developer, project manager, or administrator.&lt;/p&gt;
-        &lt;&#47;@shiro.hasAnyRoles&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.hasPermission&lt;/h3&gt;
-        &lt;@shiro.hasPermission name="user:create"&gt;
-            &lt;a href="createUser.html"&gt;Create a new User&lt;/a&gt;
-        &lt;&#47;@shiro.hasPermission&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.lacksPermission&lt;/h3&gt;
-        &lt;@shiro.lacksPermission name="user:delete"&gt;
-            Sorry, you are not allowed to delete user accounts.
-        &lt;&#47;@shiro.lacksPermission&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.hasAllPermissions&lt;/h3&gt;
-        &lt;@shiro.hasAllPermissions name="user:create, user:delete"&gt;
-            &lt;p&gt;You can create and delete users.&lt;/p&gt;
-        &lt;&#47;@shiro.hasAllPermissions&gt;
-        &lt;&#47;br&gt;
-        &lt;h3&gt;shiro.hasAnyPermissions&lt;/h3&gt;
-        &lt;@shiro.hasAnyPermissions name="user:create, user:delete"&gt;
-            &lt;p&gt;You can create or delete users.&lt;/p&gt;
-        &lt;&#47;@shiro.hasAnyPermissions&gt;
-        &lt;&#47;br&gt;
     &lt;/body&gt;
     &lt;/html&gt;
     </core>
@@ -144,94 +93,94 @@ These are all implementations of the examples given in the <a href="http://shiro
 <h4>shiro.guest</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.guest</span></span>&gt;
-        &lt;<span class="pl-ent">p</span>&gt;Hi there! Please <a href="login.html">Login</a> or <a href="signup.html">Signup</a> today!&lt;/<span class="pl-ent">/p</span>&gt;
-    &lt;/<span class="pl-ent"><span class="pl-ii">@shiro.guest</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.guest</span></span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;Hi there! Please <a href="login.html">Login</a> or <a href="signup.html">Signup</a> today!&lt;/<span class="pl-ent">/p</span>&gt;
+&lt;/<span class="pl-ent"><span class="pl-ii">@shiro.guest</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.user</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.user</span></span>&gt;
-        &lt;<span class="pl-ent">div</span>&gt;Welcome back John! Not John? Click <a href="login.html">here</a> to login.&lt;<span class="pl-ent">/div</span>&gt;
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.user</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.user</span></span>&gt;
+    &lt;<span class="pl-ent">div</span>&gt;Welcome back John! Not John? Click <a href="login.html">here</a> to login.&lt;<span class="pl-ent">/div</span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.user</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.authenticated</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.notAuthenticated</span></span>&gt;
-        Please <a href="login.html">login</a> in order to update your credit card information.
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.notAuthenticated</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.notAuthenticated</span></span>&gt;
+    Please <a href="login.html">login</a> in order to update your credit card information.
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.notAuthenticated</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.principal</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent">p</span>&gt;Hello,
-        &lt;<span class="pl-ent"><span class="pl-ii">@shiro.principal/</span></span>&gt;
-        , how are you today?
-     &lt;<span class="pl-ent">/p</span>&gt;
-     &lt;<span class="pl-ent">p>Hello,
-        &lt;<span class="pl-ent"><span class="pl-ii">@shiro.principal type="your class type full class path" property="attribute name of class"/</span></span>&gt;
-        , how are you today?
-     &lt;<span class="pl-ent">/p</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;Hello,
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.principal/</span></span>&gt;
+    , how are you today?
+&lt;<span class="pl-ent">/p</span>&gt;
+&lt;<span class="pl-ent">p>Hello,
+    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.principal type="your class type full class path" property="attribute name of class"/</span></span>&gt;
+    , how are you today?
+&lt;<span class="pl-ent">/p</span>&gt;
 </pre>
 </div>
 <h4>shiro.lacksRole</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.lacksRole name="administrator"</span></span>&gt;
-        Sorry, you are not allowed to administer the system.
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.lacksRole</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.lacksRole name="administrator"</span></span>&gt;
+    Sorry, you are not allowed to administer the system.
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.lacksRole</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.hasAllRoles</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAllRoles name="developer, project manager"</span></span>&gt;
-        &lt;<span class="pl-ent">p</span>&gt;You are a developer and a project manager.&lt;<span class="pl-ent">/p</span>&gt;
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAllRoles</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAllRoles name="developer, project manager"</span></span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;You are a developer and a project manager.&lt;<span class="pl-ent">/p</span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAllRoles</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.hasAnyRoles</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAnyRoles name="developer, project manager, administrator"</span></span>&gt;
-        &lt;<span class="pl-ent">p</span>&gt;You are a developer, project manager, or administrator.&lt;<span class="pl-ent">/p</span>&gt;
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAnyRoles></span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAnyRoles name="developer, project manager, administrator"</span></span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;You are a developer, project manager, or administrator.&lt;<span class="pl-ent">/p</span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAnyRoles></span></span>&gt;
 </pre>
 </div>
 <h4>shiro.hasPermission</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasPermission name="user:create"</span></span>&gt;
-        &lt;<span class="pl-ent">a href="createUser.html"</span>&gt;Create a new User&lt;<span class="pl-ent">/a</span>&gt;
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasPermission</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasPermission name="user:create"</span></span>&gt;
+    &lt;<span class="pl-ent">a href="createUser.html"</span>&gt;Create a new User&lt;<span class="pl-ent">/a</span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasPermission</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.lacksPermission</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.lacksPermission name="user:delete"</span></span>&gt;
-        Sorry, you are not allowed to delete user accounts.
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.lacksPermission</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.lacksPermission name="user:delete"</span></span>&gt;
+    Sorry, you are not allowed to delete user accounts.
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.lacksPermission</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.hasAllPermissions</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAllPermissions name="user:create, user:delete"</span></span>&gt;
-        &lt;<span class="pl-ent">p</span>&gt;You can create and delete users.&lt;<span class="pl-ent">/p</span>&gt;
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAllPermissions</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAllPermissions name="user:create, user:delete"</span></span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;You can create and delete users.&lt;<span class="pl-ent">/p</span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAllPermissions</span></span>&gt;
 </pre>
 </div>
 <h4>shiro.hasAnyPermissions</h4>
 <div class="highlight highlight-text-html-basic">
 <pre>
-    &lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAnyPermissions name="user:create, user:delete"</span></span>&gt;
-        &lt;<span class="pl-ent">p</span>&gt;You can create or delete users.&lt;<span class="pl-ent">/p</span>&gt;
-    &lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAnyPermissions</span></span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">@shiro.hasAnyPermissions name="user:create, user:delete"</span></span>&gt;
+    &lt;<span class="pl-ent">p</span>&gt;You can create or delete users.&lt;<span class="pl-ent">/p</span>&gt;
+&lt;<span class="pl-ent"><span class="pl-ii">/@shiro.hasAnyPermissions</span></span>&gt;
 </pre>
 </div>
 <h2>
