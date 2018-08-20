@@ -49,6 +49,7 @@
 </h2>
 <div class="highlight highlight-text-html-basic">
     <pre>
+    <core>
     &lt;!DOCTYPE html&gt;
     &lt; lang="en"&gt;
     &lt;head&gt;
@@ -60,17 +61,17 @@
         &lt;@shiro.guest&gt;
             &lt;p&gt;Hi there! Please &lt;a href="login.html"&gt;Login&lt;/a&gt; or &lt;a href="signup.html"&gt;Signup&lt;/a&gt; today!&lt;/p&gt;
         &lt;&#47;@shiro.guest&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.user&lt;/h3&gt;
         &lt;@shiro.user&gt;
             &lt;div&gt;Welcome back John! Not John? Click &lt;a href="login.html"&gt;here&lt;/a&gt; to login.&lt;/div&gt;
         &lt;&#47;@shiro.user&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.authenticated&lt;/h3&gt;
         &lt;@shiro.notAuthenticated&gt;
             Please &lt;a href="login.html"&gt;login&lt;/a&gt; in order to update your credit card information.
         &lt;&#47;@shiro.notAuthenticated&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.principal&lt;/h3&gt;
         &lt;p&gt;Hello,
             &lt;@shiro.principal/&gt;
@@ -80,43 +81,44 @@
             &lt;@shiro.principal type="your class type full class path" property="attribute name of class"/&gt;
             , how are you today?
         &lt;/p&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.lacksRole&lt;/h3&gt;
         &lt;@shiro.lacksRole name="administrator"&gt;
             Sorry, you are not allowed to administer the system.
         &lt;&#47;@shiro.lacksRole&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.hasAllRoles&lt;/h3&gt;
         &lt;@shiro.hasAllRoles name="developer, project manager"&gt;
             &lt;p&gt;You are a developer and a project manager.&lt;/p&gt;
         &lt;&#47;@shiro.hasAllRoles&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.hasAnyRoles&lt;/h3&gt;
         &lt;@shiro.hasAnyRoles name="developer, project manager, administrator"&gt;
             &lt;p&gt;You are a developer, project manager, or administrator.&lt;/p&gt;
         &lt;&#47;@shiro.hasAnyRoles&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.hasPermission&lt;/h3&gt;
         &lt;@shiro.hasPermission name="user:create"&gt;
             &lt;a href="createUser.html"&gt;Create a new User&lt;/a&gt;
         &lt;&#47;@shiro.hasPermission&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.lacksPermission&lt;/h3&gt;
         &lt;@shiro.lacksPermission name="user:delete"&gt;
             Sorry, you are not allowed to delete user accounts.
         &lt;&#47;@shiro.lacksPermission&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.hasAllPermissions&lt;/h3&gt;
         &lt;@shiro.hasAllPermissions name="user:create, user:delete"&gt;
             &lt;p&gt;You can create and delete users.&lt;/p&gt;
         &lt;&#47;@shiro.hasAllPermissions&gt;
-    
+        &lt;&#47;br&gt;
         &lt;h3&gt;shiro.hasAnyPermissions&lt;/h3&gt;
         &lt;@shiro.hasAnyPermissions name="user:create, user:delete"&gt;
             &lt;p&gt;You can create or delete users.&lt;/p&gt;
         &lt;&#47;@shiro.hasAnyPermissions&gt;
-    
+        &lt;&#47;br&gt;
     &lt;/body&gt;
     &lt;/html&gt;
+    </core>
     </pre>
 </div>
